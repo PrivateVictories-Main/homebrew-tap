@@ -12,6 +12,13 @@ class ClaudeAutoContinue < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.12")
+    # Install pyobjc dependencies explicitly — pip_install_and_link
+    # alone sometimes misses native extensions in the Homebrew sandbox.
+    system libexec/"bin/pip", "install",
+           "pyobjc-core>=10.0",
+           "pyobjc-framework-ApplicationServices>=10.0",
+           "pyobjc-framework-Cocoa>=10.0",
+           "rich>=13.0"
     venv.pip_install_and_link buildpath
   end
 
