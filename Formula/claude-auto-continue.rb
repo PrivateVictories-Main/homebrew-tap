@@ -11,28 +11,28 @@ class ClaudeAutoContinue < Formula
   depends_on "python@3.12"
 
   resource "pyobjc-core" do
-    url "https://files.pythonhosted.org/packages/b8/b6/d5612eb40be4fd5ef88c259339e6313f46ba67577a95d86c3470b951fce0/pyobjc_core-12.1.tar.gz"
-    sha256 "2bb3903f5387f72422145e1466b3ac3f7f0ef2e9960afa9bcd8961c5cbf8bd21"
+    url "https://files.pythonhosted.org/packages/64/5a/6b15e499de73050f4a2c88fff664ae154307d25dc04da8fb38998a428358/pyobjc_core-12.1-cp312-cp312-macosx_10_13_universal2.whl"
+    sha256 "818bcc6723561f207e5b5453efe9703f34bc8781d11ce9b8be286bb415eb4962"
   end
 
   resource "pyobjc-framework-Cocoa" do
-    url "https://files.pythonhosted.org/packages/02/a3/16ca9a15e77c061a9250afbae2eae26f2e1579eb8ca9462ae2d2c71e1169/pyobjc_framework_cocoa-12.1.tar.gz"
-    sha256 "5556c87db95711b985d5efdaaf01c917ddd41d148b1e52a0c66b1a2e2c5c1640"
+    url "https://files.pythonhosted.org/packages/95/bf/ee4f27ec3920d5c6fc63c63e797c5b2cc4e20fe439217085d01ea5b63856/pyobjc_framework_cocoa-12.1-cp312-cp312-macosx_10_13_universal2.whl"
+    sha256 "547c182837214b7ec4796dac5aee3aa25abc665757b75d7f44f83c994bcb0858"
   end
 
   resource "pyobjc-framework-CoreText" do
-    url "https://files.pythonhosted.org/packages/29/da/682c9c92a39f713bd3c56e7375fa8f1b10ad558ecb075258ab6f1cdd4a6d/pyobjc_framework_coretext-12.1.tar.gz"
-    sha256 "e0adb717738fae395dc645c9e8a10bb5f6a4277e73cba8fa2a57f3b518e71da5"
+    url "https://files.pythonhosted.org/packages/cd/0f/ddf45bf0e3ba4fbdc7772de4728fd97ffc34a0b5a15e1ab1115b202fe4ae/pyobjc_framework_coretext-12.1-cp312-cp312-macosx_10_13_universal2.whl"
+    sha256 "d246fa654bdbf43bae3969887d58f0b336c29b795ad55a54eb76397d0e62b93c"
   end
 
   resource "pyobjc-framework-Quartz" do
-    url "https://files.pythonhosted.org/packages/94/18/cc59f3d4355c9456fc945eae7fe8797003c4da99212dd531ad1b0de8a0c6/pyobjc_framework_quartz-12.1.tar.gz"
-    sha256 "27f782f3513ac88ec9b6c82d9767eef95a5cf4175ce88a1e5a65875fee799608"
+    url "https://files.pythonhosted.org/packages/e9/9b/780f057e5962f690f23fdff1083a4cfda5a96d5b4d3bb49505cac4f624f2/pyobjc_framework_quartz-12.1-cp312-cp312-macosx_10_13_universal2.whl"
+    sha256 "7730cdce46c7e985535b5a42c31381af4aa6556e5642dc55b5e6597595e57a16"
   end
 
   resource "pyobjc-framework-ApplicationServices" do
-    url "https://files.pythonhosted.org/packages/be/6a/d4e613c8e926a5744fc47a9e9fea08384a510dc4f27d844f7ad7a2d793bd/pyobjc_framework_applicationservices-12.1.tar.gz"
-    sha256 "c06abb74f119bc27aeb41bf1aef8102c0ae1288aec1ac8665ea186a067a8945b"
+    url "https://files.pythonhosted.org/packages/37/a7/55fa88def5c02732c4b747606ff1cbce6e1f890734bbd00f5596b21eaa02/pyobjc_framework_applicationservices-12.1-cp312-cp312-macosx_10_13_universal2.whl"
+    sha256 "c8f6e2fb3b3e9214ab4864ef04eee18f592b46a986c86ea0113448b310520532"
   end
 
   resource "rich" do
