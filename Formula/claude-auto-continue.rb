@@ -3,8 +3,8 @@ class ClaudeAutoContinue < Formula
 
   desc "Auto-click Continue in Claude desktop app, browser, and CLI"
   homepage "https://github.com/PrivateVictories-Main/claude-auto-continue-macos"
-  url "https://github.com/PrivateVictories-Main/claude-auto-continue-macos/archive/v0.7.2.tar.gz"
-  sha256 "8ccfe5c439ae226e285d5acf3600abd424496ef855baa7fb77ab17b3a08dccb4"
+  url "https://github.com/PrivateVictories-Main/claude-auto-continue-macos/archive/v0.7.3.tar.gz"
+  sha256 "73ded9e05b0780a60f3805b87a4c563ad0cb0903f8e487250daad92d17a37e85"
   license "MIT"
 
   depends_on :macos
