@@ -63,17 +63,24 @@ class ClaudeAutoContinue < Formula
   def install
     venv = virtualenv_create(libexec, "python3.12")
 
-    # Install pyobjc wheels directly (kept intact via :nounzip)
+    # Collect pyobjc wheels into build dir (nounzip keeps them intact)
+    wheels_dir = buildpath/"_wheels"
+    wheels_dir.mkpath
+
     %w[pyobjc-core pyobjc-framework-Cocoa pyobjc-framework-CoreText
        pyobjc-framework-Quartz pyobjc-framework-ApplicationServices].each do |name|
       resource(name).stage do
-        whl = Dir["*.whl"].first
-        system libexec/"bin/pip", "install", "--no-deps", "--ignore-installed", whl
+        cp Dir["*.whl"].first, wheels_dir
       end
     end
 
+    # Install all pyobjc wheels in one pip call
+    system libexec/"bin/python3.12", "-m", "pip", "install",
+           "--no-deps", "--ignore-installed", "--no-compile",
+           *Dir[wheels_dir/"*.whl"]
+
     # Install pure-Python resources from source
-    %w[rich markdown-it-py mdurl pygments].each do |name|
+    %w[mdurl pygments markdown-it-py rich].each do |name|
       resource(name).stage do
         venv.pip_install "."
       end
